@@ -131,6 +131,20 @@ export class Video extends common.Video {
     }
   }
 
+    public showMediaControls(): void {
+        if (!this.mediaController) {
+            return;
+        }
+        this.mediaController.show();
+    }
+
+  public hideMediaControls(): void {
+      if (!this.mediaController) {
+          return;
+      }
+      this.mediaController.hide();
+  }
+
   private _setupMediaPlayerListeners(): void {
     let that = new WeakRef(this);
     this.mediaPlayer.setOnPreparedListener(
