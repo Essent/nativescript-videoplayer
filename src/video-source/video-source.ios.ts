@@ -6,44 +6,44 @@ import { CLog, CLogTypes } from '../videoplayer-common';
 export * from './video-source-common';
 
 export class VideoSource {
-  public ios: AVPlayerItem;
-  height: any;
-  width: any;
+    public ios: AVPlayerItem;
+    height: any;
+    width: any;
 
-  public loadFromResource(name: string): boolean {
-    CLog(CLogTypes.info, `VideoSource.loadFromResource --- name ${name}`);
-    const videoURL = NSBundle.mainBundle.URLForResourceWithExtension(name, null);
-    const player = AVPlayerItem.playerItemWithURL(videoURL);
-    this.ios = player;
-    return this.ios != null;
-  }
-
-  public loadFromFile(path: string): boolean {
-    CLog(CLogTypes.info, `VideoSource.loadFromFile --- path ${path}`);
-    let fileName = isString(path) ? path.trim() : '';
-
-    if (fileName.indexOf('~/') === 0) {
-      fileName = fs.path.join(fs.knownFolders.currentApp().path, fileName.replace('~/', ''));
-      CLog(CLogTypes.info, `VideoSource.loadFromFile --- fileName ${fileName}`);
+    public loadFromResource(name: string): boolean {
+        CLog(CLogTypes.info, `VideoSource.loadFromResource --- name ${name}`);
+        const videoURL = NSBundle.mainBundle.URLForResourceWithExtension(name, null);
+        const player = AVPlayerItem.playerItemWithURL(videoURL);
+        this.ios = player;
+        return this.ios != null;
     }
 
-    const videoURL = NSURL.fileURLWithPath(fileName);
-    const player = AVPlayerItem.playerItemWithURL(videoURL);
-    this.ios = player;
-    return this.ios != null;
-  }
+    public loadFromFile(path: string): boolean {
+        CLog(CLogTypes.info, `VideoSource.loadFromFile --- path ${path}`);
+        let fileName = isString(path) ? path.trim() : '';
 
-  public loadFromUrl(url: string): boolean {
-    CLog(CLogTypes.info, `VideoSource.loadFromUrl --- url ${url}`);
-    const videoURL = NSURL.URLWithString(url);
-    const player = AVPlayerItem.playerItemWithURL(videoURL);
-    this.ios = player;
-    return this.ios != null;
-  }
+        if (fileName.indexOf('~/') === 0) {
+            fileName = fs.path.join(fs.knownFolders.currentApp().path, fileName.replace('~/', ''));
+            CLog(CLogTypes.info, `VideoSource.loadFromFile --- fileName ${fileName}`);
+        }
 
-  public setNativeSource(source: any): boolean {
-    CLog(CLogTypes.info, `VideoSource.setNativeSource --- source ${source}`);
-    this.ios = source;
-    return source != null;
-  }
+        const videoURL = NSURL.fileURLWithPath(fileName);
+        const player = AVPlayerItem.playerItemWithURL(videoURL);
+        this.ios = player;
+        return this.ios != null;
+    }
+
+    public loadFromUrl(url: string): boolean {
+        CLog(CLogTypes.info, `VideoSource.loadFromUrl --- url ${url}`);
+        const videoURL = NSURL.URLWithString(url);
+        const player = AVPlayerItem.playerItemWithURL(videoURL);
+        this.ios = player;
+        return this.ios != null;
+    }
+
+    public setNativeSource(source: any): boolean {
+        CLog(CLogTypes.info, `VideoSource.setNativeSource --- source ${source}`);
+        this.ios = source;
+        return source != null;
+    }
 }
