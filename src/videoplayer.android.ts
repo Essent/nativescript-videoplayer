@@ -236,6 +236,20 @@ export class Video extends VideoCommon {
     this._openVideo();
   }
 
+    public showMediaControls(): void {
+        if (!this.mediaController) {
+            return;
+        }
+        this.mediaController.show();
+    }
+
+    public hideMediaControls(): void {
+    if (!this.mediaController) {
+        return;
+    }
+    this.mediaController.hide();
+    }
+
   private _setupMediaPlayerListeners() {
     CLog(CLogTypes.info, 'Video._setupMediaPlayerListeners');
     this.player.setOnPreparedListener(
