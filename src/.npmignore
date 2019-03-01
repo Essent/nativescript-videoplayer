@@ -4,9 +4,13 @@ app/
 .vscode/
 *.png
 *.log
+*.yml
 *.ts
 !index.d.ts
 !videoplayer.d.ts
 !video-source/video-source.d.ts
 tsconfig.json
 README.md
+scripts/
+typings/
+node_modules/
