@@ -1,7 +1,8 @@
-<a align="center" href="https://www.npmjs.com/package/nativescript-videoplayer">
-    <h3 align="center">NativeScript VideoPlayer</h3>
-</a>
-<h4 align="center">A NativeScript plugin to provide the ability to play local and remote videos.</h4>
+# NativeScript Video Player
+
+[![npm version](https://badge.fury.io/js/%40essent%2Fnativescript-videoplayer.svg)](https://www.npmjs.com/package/@essent/nativescript-videoplayer)
+
+A NativeScript plugin to provide the ability to play local and remote videos.
 
 ---
 
@@ -9,7 +10,7 @@
 
 From your command prompt/terminal go to your app's root folder and execute:
 
-`tns plugin add nativescript-videoplayer`
+`npm i @essent/nativescript-videoplayer`
 
 #### Platform controls used:
 
