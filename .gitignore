@@ -4,7 +4,6 @@
 *.zip
 *.js
 !src/scripts/*.js
-!seed-tests/*.js
 *.js.map
 *.log
 *.d.ts
@@ -21,6 +20,8 @@ demo/.vscode
 node_modules
 .vscode/
 *.DS_Store
+publish/src
+publish/package
 
 .idea/
 .vscode/
