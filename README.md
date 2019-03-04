@@ -3,32 +3,6 @@
 </a>
 <h4 align="center">A NativeScript plugin to provide the ability to play local and remote videos.</h4>
 
-<p align="center">
-    <a href="https://www.npmjs.com/package/nativescript-videoplayer">
-        <img src="https://img.shields.io/npm/v/nativescript-videoplayer.svg" alt="npm">
-    </a>
-    <a href="https://www.npmjs.com/package/nativescript-videoplayer">
-        <img src="https://img.shields.io/npm/dt/nativescript-videoplayer.svg?label=npm%20downloads" alt="npm">
-    </a>
-    <a href="https://github.com/bradmartin/nativescript-videoplayer/stargazers">
-        <img src="https://img.shields.io/github/stars/bradmartin/nativescript-videoplayer.svg" alt="stars">
-    </a>
-     <a href="https://github.com/bradmartin/nativescript-videoplayer/network">
-        <img src="https://img.shields.io/github/forks/bradmartin/nativescript-videoplayer.svg" alt="forks">
-    </a>
-    <a href="https://github.com/bradmartin/nativescript-videoplayer/blob/master/src/LICENSE.md">
-        <img src="https://img.shields.io/github/license/bradmartin/nativescript-videoplayer.svg" alt="license">
-    </a>
-    <a href="https://paypal.me/bradwayne88">
-        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
-    </a>
-    <a href="http://nstudio.io">
-      <img src="./screenshots/nstudio-banner.png" alt="nStudio banner">
-    </a>
-    <h5 align="center">Do you need assistance on your project or plugin? Contact the nStudio team anytime at <a href="mailto:team@nstudio.io">team@nstudio.io</a> to get up to speed with the best practices in mobile and web app development.
-    </h5>
-</p>
-
 ---
 
 ### Installation
