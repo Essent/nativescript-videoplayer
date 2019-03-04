@@ -1,4 +1,4 @@
-import { Video } from 'nativescript-videoplayer';
+import { Video } from '@essent/nativescript-videoplayer';
 import { Observable } from 'tns-core-modules/data/observable';
 import { isAndroid } from 'tns-core-modules/platform';
 import { setInterval } from 'tns-core-modules/timer';
