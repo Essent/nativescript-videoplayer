@@ -121,7 +121,7 @@
   "_shasum": "7bdee571649168a79ded1bf63beb6d7b4b9cfa2a",
   "_from": "..",
   "_resolved": "file:..",
-  "devDependencies": { 
+  "devDependencies": {
     "prompt": "^1.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.4",
