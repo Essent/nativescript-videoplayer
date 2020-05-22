@@ -560,7 +560,7 @@ export class Video extends VideoCommon {
     }
 
     private _setNativeVideo(nativeVideo: any): void {
-        CLog(CLogTypes.error, `Video._setNativeVideo`);
+        CLog(CLogTypes.info, `Video._setNativeVideo `, nativeVideo);
         this._src = nativeVideo;
         this._openVideo();
     }
