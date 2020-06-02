@@ -1,13 +1,13 @@
 {
   "name": "@essent/nativescript-videoplayer",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "main": "videoplayer",
   "typings": "videoplayer.d.ts",
   "description": "A NativeScript plugin that uses the native video players to play local and remote videos.",
   "nativescript": {
     "platforms": {
-      "android": "5.2.1",
-      "ios": "5.2.0"
+      "android": "6.5.0",
+      "ios": "6.5.1"
     },
     "plugin": {
       "nan": "true",
@@ -17,22 +17,17 @@
     }
   },
   "scripts": {
-    "tsc": "tsc -skipLibCheck",
-    "build": "npm i && tsc",
+    "tsc": "npm i && tsc",
+    "build": "npm run tsc && npm run build.native",
     "build.native": "node scripts/build-native.js",
-    "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
-    "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
-    "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-    "plugin.link": "npm link && cd ../demo && npm link @essent/nativescript-videoplayer && cd ../src",
-    "plugin.tscwatch": "npm run tsc -- -w",
-    "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
-    "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
-    "demo.reset": "cd ../demo && rimraf platforms",
-    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove @essent/nativescript-videoplayer && tns plugin add ../src",
-    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
-    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
-    "prepack": "npm run build.native"
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "prepack": "npm run build.native",
+    "demo.ios": "npm i && cd ../demo && tns run ios",
+    "demo.android": "npm i && cd ../demo && tns run android",
+    "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
+    "plugin.prepare": "npm run build && cd ../demo && tns plugin remove @essent/nativescript-videoplayer && tns plugin add ../src",
+    "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i"
   },
   "lint-staged": {
     "*.ts, *.js, *.css, *.scss, *.md": [
@@ -122,12 +117,17 @@
   "_from": "..",
   "_resolved": "file:..",
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.4",
-    "prettier": "^1.12.0",
-    "tns-core-modules": "5.2.2",
-    "tns-platform-declarations": "5.2.2",
-    "tslint": "~5.9.1",
-    "typescript": "3.3.3333"
-  }
+    "prompt": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "semver": "^5.6.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.4",
+    "prettier": "^2.0.5",
+    "tns-core-modules": "6.5.1",
+    "tns-platform-declarations": "6.5.1",
+    "tslint": "~6.1.2",
+    "typescript": "3.9.3"
+  },
+  "dependencies": {},
+  "bootstrapper": "nativescript-plugin-seed"
 }
