@@ -2,10 +2,10 @@
   "nativescript": {
     "id": "org.nativescript.videoplayer",
     "tns-android": {
-      "version": "6.0.0"
+      "version": "6.5.0"
     },
     "tns-ios": {
-      "version": "6.0.1"
+      "version": "6.5.0"
     }
   },
   "description": "NativeScript Demo Application",

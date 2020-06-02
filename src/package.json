@@ -6,8 +6,8 @@
   "description": "A NativeScript plugin that uses the native video players to play local and remote videos.",
   "nativescript": {
     "platforms": {
-      "android": "6.0.0",
-      "ios": "6.0.1"
+      "android": "6.5.0",
+      "ios": "6.5.1"
     },
     "plugin": {
       "nan": "true",
